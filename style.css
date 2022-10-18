@@ -1,0 +1,278 @@
+/************** GENERAL*******************/
+*{
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'open sans', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{ 
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.active{
+    background:#fcde44 ;
+     border-radius: 2px;
+
+}
+.clearfix::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+.title{
+    font-size: 2.2rem;
+}
+/**************HEADER*******************/
+header{
+    background-color: #090e71;
+    padding: auto;
+    text-align: center;
+    position: fixed; /*blocca l'header in alto*/
+    top:0;
+    width: 100%;
+    z-index: 1; /*nello spostarsi va sopra gli altri elemnti*/
+}
+header img{
+    width: 150px;
+    height: 110px;
+    padding-left: 10px;
+
+}
+/**************NAVIGATION*******************/
+#nav{
+    list-style-type: none;
+    text-align: center;
+}
+#nav li{
+    display: inline-block;
+    padding: 8px 10px 8px 10px
+}
+
+#nav li a{
+    color:#090e71;
+    text-decoration: none;
+   
+}
+/**************MAIN*******************/
+main{
+    min-height: calc(100vh - 164.4px - 114.4px);
+    padding-top: 180.400px;
+}
+/**************GALLERY*******************/
+#gallery{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#gallery img{
+    width: 100%;
+
+}
+#gallery .picture {
+    line-height: 0;
+}
+#gallery .item{
+    flex: 0 1 50%;
+    padding:15px;
+    position: relative;
+}
+
+#gallery .caption{
+    background: #f0f0f0;
+    padding:10px;
+}
+#gallery .caption p{
+    margin:0;
+}
+#gallery .caption img{
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    top:0;
+    right: 0;;
+}
+
+/**************ABOUT*******************/
+#about img{
+    padding: 5px;
+    width: 100%;}
+/**************CONTATTI*******************/
+#contact ul{
+    list-style-type: none;
+    padding:0;
+}
+#contact li{
+    padding:5px 0px; 
+}
+#contact .gg-smartphone{
+    float: left;
+}
+#contact .contacts a{
+    margin:3px 0px 0px 5px;
+    display:inline-block;
+}
+#contact .gg-mail{
+    float: left;
+    margin:3px 0px 6px 0px;
+}
+#contact .gg-instagram{
+    float: left;
+}
+
+
+
+/**************FOOTER*******************/
+footer.main{
+    clear: both;
+    text-align: center;
+    padding: 25px;
+  
+}
+footer .social img{
+    width: 30px;
+    height: 30px;
+}
+footer .main a {
+    padding: 3px 6px;
+    display: inline-block;
+    
+}
+
+
+
+
+
+@media screen and (min-width: 768px){
+    /****tutti gli schermi di pc ecc più larghi di 768 vedranno tre colonne**********/
+    header{
+        height: 24%;
+    }
+    nav{
+        background-color:#fbfc53;
+        
+    }
+    #nav li a{
+        transition: background .3s;
+        color:#090e71;
+    }
+    #nav li a:hover {
+        background: #fcde44;
+        border-radius: 2px;
+        
+    }
+  #gallery .item{
+    flex: 0 1 33.333%
+  }
+    
+/*********** ABOUT **********/
+ 
+ #about img{
+    border-radius: 100% ;
+    padding: 15px 0px;
+}
+
+#about .profile-pic{
+ float: left;
+width: 50%;
+ padding: 0px 20px;
+}
+#about .description{
+float: right;
+ width: 50%;
+ padding: 0px 20px;
+}
+/*********** CONTATTI **********/
+#contact .info, #contact .contacts{
+    padding:15px; 
+}
+#contact .info{
+    float: left;
+    width: 70%;
+}
+#contact .contacts{
+    float: right;
+    width: 30%;
+}
+}
+
+
+@media screen and (min-width: 992px){
+    header{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       height: 15%;
+    }
+    
+    nav{
+        background-color: #090e71;
+    
+    }
+   
+    #gallery .item:hover {
+        opacity: .7;
+      }
+      #gallery .item{
+          transition: .3s;
+      } 
+          #nav li a{
+              transition: background .3s;
+              color: #fcde44;
+          }
+          #nav li a:hover {
+              background: #4046be;
+              border-radius: 2px;
+          } 
+          .active{
+            background: #4046be;
+             border-radius: 2px;
+        
+        }
+ 
+}
+
+@media  screen and (max-width: 767px){
+    header{
+        height: 24%;
+    }
+    nav{
+        background-color:#fbfc53;
+    }
+    #nav li a{
+        transition: background .3s;
+        color:#090e71;
+    }
+    #nav li a:hover {
+        background: #fcde44;
+        border-radius: 2px;
+        opacity: .3;
+    }
+    #gallery .item:nth-child(2n+1){
+        clear: left;
+    }
+
+#about img{
+    border-radius: 100%;
+    padding: 5px;
+    width: 100%;
+   }
+
+    #about .description{
+        padding: 0px 20px;
+        width: 100%;
+    }
+    #contact .info{
+        width: 100%;
+    }
+    #contact .contacts{
+        width: 100%;
+    }
+}
+
+    
